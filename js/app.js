@@ -1,0 +1,2 @@
+let ubicacionprincipal= window.pageYOffset;
+

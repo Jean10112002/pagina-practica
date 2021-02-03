@@ -1,0 +1,35 @@
+@media screen and (max-width:880px){
+    .contenedor .contenido-header .titulo
+    {
+        font-size: 45px;
+    }
+    .contenido-header{
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        height: 720px;
+    }
+    .contenido-header>img{
+        width: 400px;
+    }
+    .textos-header{
+        margin: 0;
+    }
+    /*about us*/
+
+   .contenedor-articulo .articulo{
+        width: 40%;
+    }
+    .questions .textos-questions .titulo
+    {
+        font-size: 45px;
+    }
+    .questions{
+        height: 720px;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .questions>img{
+        width: 100px;
+    }
+   
+}
