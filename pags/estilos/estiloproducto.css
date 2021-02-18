@@ -1,0 +1,332 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    color: #1d273b;
+    font-weight: 300;
+}
+.contenedor3{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 0;
+    overflow: hidden;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.contenedor1{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 0;
+    overflow: hidden;
+}
+/*header*/
+.contactanos__header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contactanos__imagen{
+    width: 60%;
+}
+.contactanos__imagen img{
+    width: 100%;
+}
+.contactanos__texto h1{
+    color: red;
+}
+
+
+
+
+.nav .logo{
+    height: 100px;
+
+}
+.nav .logo img{
+    height: 100%;
+}
+header::before{
+    content: "";
+    margin-bottom: 100px;
+    display: block;
+}
+nav{
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0, .2);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: ease-in-out 0.5s;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 90%;
+    
+}
+.nav .logo{
+    height: 100px;
+
+}
+.nav .logo img{
+    height: 100%;
+}
+.enlaces-header{
+    font-weight: 300;
+    transition: ease-in-out 0.5s;
+}
+.nav .enlaces-header a{
+    color: #5D6678;
+    text-decoration: none;
+    margin-left: 20px;
+}
+nav .enlaces-header .lugar{
+    color: #1fde82;
+}
+nav .enlaces-header a:hover{
+    color:#1fde82;
+    transition: color .5s ease-in-out ;
+}
+.hamburguer{
+    width: 80px;
+    height: 80px;
+    display: none;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+     transition: color 0.5s ease-in; 
+}
+.hamburguer > i{
+    font-size: 25px;
+    line-height: 80px;
+}
+/*articulo*/
+
+.contenedor-articulo{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-around;
+}
+.articulo{
+    width: 27%;
+    background: #fff;
+    margin-bottom: 30px;
+  
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+    transition: 0.5s;
+}
+.articulo:hover{
+    box-shadow: 0 4px 10px rgba(17,29,48, .26);
+}
+.articulo>i{
+    font-size: 30px;
+    color: #fff;
+    background-color: #1fde82;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 8px 32px rgba(31, 222 138, .46);
+}
+.articulo>h3{
+    font-weight: 100;
+    color: #5D6678;
+    margin-top: 15px;
+    padding-bottom: 25px;
+}
+.articulo>a{
+    text-decoration: none; 
+    color: #5D6678;
+    font-weight: 400;
+}
+.articulo>a:hover{
+    color: #1fde82;
+    transition: color ease-in-out .5s;
+}
+.articulo p{
+    text-align: justify;
+  
+}
+.articulo button{
+    background-color: #1fde82;
+    border-radius: 2em;
+    padding: 10px 15px;
+    margin-top: 30px;
+    width: 80%;
+    
+}
+.articulo button a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+    
+}
+.articulo button:hover, .articulo button a:hover{
+    background-color: #1fde82;
+     color: white;
+    transition-duration: 1s;
+    transition-delay: 100;
+}
+
+
+
+/*footer*/
+footer{
+    background-color: #f2f2f2;
+    padding: 60px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.partfooter{
+    width: 20%;
+    text-align: center;
+}
+.partfooter h4{
+    color:#1d273b;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-justify: auto;
+}
+.partfooter img{
+    width: 70%;
+}
+.partfooter a{
+    display: block;
+    text-decoration: none;
+    color: #5d6678;
+    font-weight: 300;
+    transition: color .3s ease-in-out;
+    margin-bottom: 10px;
+    cursor:text;
+}
+.partfooter a:hover{
+    color: #1fde82
+}
+.social-media a{
+    font-size: 20px;
+    display: inline-block;
+    color: #adb6c7;
+    border: 1px solid #adb6c7;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    margin-right: 5px;
+    transition:all ease-in-out .3s;
+}
+.social-media a:hover{
+    color: white;
+    background-color: #1fde82;
+    border-color: #1fde82;
+    transition: .5s  ease-in-out ;
+    transition-delay: 0.2s;
+}
+
+@media screen and (max-width:636px){
+    .enlaces-header {
+        position: fixed;
+        background: #004FF9;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FFF94C, #004FF9);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FFF94C, #004FF9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+               
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        clip-path: circle(0.0% at 100% 0);
+    }
+    .contactanos__imagen{
+        width: 100%;
+    }
+
+    .nav .menudos {
+
+        -webkit-clip-path: circle(150% at 100% 0);
+        clip-path: circle(150% at 100% 0);
+
+    }
+
+    .nav .enlaces-header a{
+        color: white;
+        font-size: 20px;
+        
+    }
+    .hamburguer{
+        display:block;
+    }
+
+    .contactanos__texto h1{
+        font-size: 40px;
+    }
+    .partfooter img{
+        width: 100%;
+    }
+    .numbers .number{
+        width: 100%;
+    }
+
+ 
+}
+@media screen and (max-width:800px){
+    .contenedor-articulo .articulo{
+        width: 50%;
+    }
+}
+@media screen and (max-width:600px){
+    .contenedor-articulo .articulo{
+        width: 95%;
+    }
+}
+@media screen and (max-width:400px){
+
+    footer{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contactanos__header{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .partfooter img{
+        width: 100%;
+    }
+    .partfooter{
+        width: 40%;
+        margin-bottom: 40px;
+    }
+   
+  
+}
