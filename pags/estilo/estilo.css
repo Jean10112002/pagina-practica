@@ -81,8 +81,8 @@ nav .enlaces-header a:hover{
 .producto__celulares{
     margin-left: 1em;
     width: 100%;
-    min-height: 500px;
-    max-height: 600px;
+    min-height: 440px;
+    max-height: 500px;
     
 }
 .producto__informacion{
@@ -238,8 +238,8 @@ input[type='text']{
     }
     .grid-container{
         
-        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-        gap: 1em;
+       
+        gap: 0.2em;
        
     }
     .producto__informacion{
