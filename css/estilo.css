@@ -65,10 +65,10 @@ nav{
     margin-left: 20px;
 }
 nav .enlaces-header .lugar{
-    color: #1fde82;
+    color: #ec1c25;
 }
 nav .enlaces-header a:hover{
-    color:#1fde82;
+    color:#ec1c25;
     transition: color .5s ease-in-out ;
 }
 .hamburguer{
@@ -514,6 +514,7 @@ footer{
         flex-direction: column;
         justify-content: space-evenly;
         clip-path: circle(0.0% at 100% 0);
+        color: black
     }
 
     .nav .menudos {

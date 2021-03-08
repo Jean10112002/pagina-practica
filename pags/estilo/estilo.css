@@ -1,0 +1,268 @@
+body{
+    overflow-y:hidden;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+/*nav*/
+header::before{
+    content: "";
+    margin-bottom: 100px;
+    display: block;
+}
+nav{
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0, .2);
+  
+    top: 0;
+    z-index: 100;
+    transition: ease-in-out 0.5s;
+    margin: 0 auto;
+      position: fixed;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 90%;
+    
+}
+.nav .logo{
+    height: 150px;
+
+}
+.nav .logo img{
+    height: 100%;
+}
+.enlaces-header{
+    font-weight: 300;
+    transition: ease-in-out 0.5s;
+}
+.nav .enlaces-header a{
+    color: #5D6678;
+    text-decoration: none;
+    margin-left: 20px;
+}
+nav .enlaces-header .lugar{
+    color: #ec1c25;
+}
+nav .enlaces-header a:hover{
+    color:#ec1c25;
+    transition: color .5s ease-in-out ;
+}
+.hamburguer{
+    width: 80px;
+    height: 80px;
+    display: none;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    /* transition: color 0.5s ease-in; */
+}
+.hamburguer > i{
+    font-size: 25px;
+    line-height: 80px;
+    color: #ec1c25;
+}
+/*container*/
+.container{
+    width: 70%;
+    margin: auto;
+}
+.container__2{
+    width: 80%;
+    margin: auto;
+}
+.producto__celulares{
+    margin-left: 1em;
+    width: 100%;
+    min-height: 500px;
+    max-height: 600px;
+    
+}
+.producto__informacion{
+    width: 90%;
+    height: 200px;
+    min-height: 400px;
+    max-height: 600px;
+    box-shadow: 2px 2px 10px rgb(134, 132, 132);
+    height: 450px;    
+}
+.producto__img{
+    width: 100%;
+    border-bottom: 3px solid silver;
+}
+.producto__img img:hover{
+    opacity: 0.5;
+    transition: opacity 1s linear;
+}
+.producto__img img{
+    width: 80%;
+    display: block;
+    margin: auto;
+    height: 200px;
+    object-fit: container;
+}
+.producto__info{
+    padding: 2em;
+    margin-top: 2vh;
+    min-height: 150px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    color: black;
+    text-align: center;
+    
+}
+.producto__info h3:nth-child(1){
+    color: black;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.producto__info h3:nth-child(2){
+    color: rgb(201, 21, 21);
+}
+
+.grid-container{
+    gap: 0.1em;
+    width: 100%;;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    display: grid;
+    height: 80vh;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-template-rows: auto;
+}
+.producto__boton{
+    font-size: 1.2em;
+    display: block;
+    text-decoration: none;
+    padding: 0.4em 1em;
+    border-radius: 1em;
+    background-color:#ec1c25;
+    color: white;
+    
+  
+}
+.producto__boton:hover{
+    transition: background-color 1s , color 2s linear;
+    background-color: rgb(230, 168, 36);
+    color: rgb(255, 255, 255);
+}
+input[type='text']{
+    width: 50%;
+    display: block;
+    height: 2.5em;
+    text-align: center;
+    color: #ec1c25;
+    border:none;
+    background-color: transparent;
+    border-radius: 1em;
+    font-size: 20px;
+    
+
+}
+
+.buscador__caja{
+    margin-top: 7em;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.buscador::placeholder{
+    color: red;
+    font-size: 20px;
+   
+}
+.elementos{
+    grid-column: 1/-1;
+
+    text-align: center;
+    width: 100%;
+    
+
+}
+.img-error{
+    display: block;
+    margin: auto;
+    width: 30%;
+    overflow: hidden;
+}
+
+
+
+
+@media screen and (max-width:636px){
+    .enlaces-header {
+        position: fixed;
+        background: #FF416C;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        clip-path: circle(0.0% at 100% 0);
+        color: black
+    }
+
+    .nav .menudos {
+
+        -webkit-clip-path: circle(150% at 100% 0);
+        clip-path: circle(150% at 100% 0);
+
+    }
+    .nav .enlaces-header a{
+        color: white;
+        font-size: 20px;
+        
+    }
+    .hamburguer{
+        display:block;
+    }
+    .nav .logo{
+        height: 100px;
+    }
+    .container,.container__2{
+        width: 100%;
+    }
+    .grid-container{
+        
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        gap: 1em;
+       
+    }
+    .producto__informacion{
+        width: 80%;
+        margin: 0 auto;
+        box-shadow: 2px 2px 10px rgb(134, 132, 132);
+        height: 400px;    
+    }
+    .producto__info{
+        padding: 0.1em;
+        min-height: 150px;
+        height: 160px;
+    }
+    .producto__celulares{
+        margin-left: 0em;
+        margin: auto;
+    }
+    .producto__boton{
+        width: 50%;
+        padding: 0.4em 1em;
+        margin: 0 auto;
+        border-radius: 1em;
+    }
+    .buscador{
+        width: 70%;
+        margin: auto;
+    }
+}
