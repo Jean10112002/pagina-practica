@@ -238,7 +238,7 @@ input[type='text']{
     }
     .grid-container{
         
-       
+       height: 75vh;
         gap: 0.2em;
        
     }
