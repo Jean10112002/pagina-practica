@@ -150,14 +150,14 @@ texto.addEventListener('click',(e)=>{
     texto.style.border='2px solid silver'
 })
 
-texto.addEventListener('keypress',(e)=>{
+/*texto.addEventListener('keypress',(e)=>{
     if(e.keyCode==13){
         codeHtml=''
         filtrar()
     }
 
 
-})
+})*/
 
 
 
