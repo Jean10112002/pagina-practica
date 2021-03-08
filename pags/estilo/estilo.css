@@ -157,9 +157,11 @@ input[type='text']{
     width: 50%;
     display: block;
     height: 2.5em;
+
     text-align: center;
     color: #ec1c25;
     border:none;
+    border: 2px solid silver;
     background-color: transparent;
     border-radius: 1em;
     font-size: 20px;

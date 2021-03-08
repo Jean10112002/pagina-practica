@@ -146,7 +146,12 @@ contenedor.innerHTML=codeHtml
 
 
 const texto=document.getElementById('texto')
+texto.addEventListener('click',(e)=>{
+    texto.style.border='2px solid silver'
+    
 
+
+})
 
 
 
