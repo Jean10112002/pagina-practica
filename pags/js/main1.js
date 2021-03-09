@@ -1,23 +1,27 @@
 
 let productos=[{
+    objeto:'celular',
     img: 'https://s03.s3c.es/imag/_v0/770x420/2/6/e/600x400_Motorola-One-Black-Laydown-combo-1.png',
     modelo: 'Note 8 pro',
     marca: 'Huawei',
     precio: '$345.00',
     año:'2020'
 },{
+    objeto:'celular',
     img: 'https://s03.s3c.es/imag/_v0/770x420/2/6/e/600x400_Motorola-One-Black-Laydown-combo-1.png',
     modelo: 'Note 1 pro',
     marca: 'Huawei',
     precio: '$321.00',
     año:'2020'
 },{
+    objeto:'celular',
     img: 'https://s03.s3c.es/imag/_v0/770x420/2/6/e/600x400_Motorola-One-Black-Laydown-combo-1.png',
     modelo: 'Note 2 pro',
     marca: 'Huawei',
     precio: '$324.00',
     año:'2020'
 },{
+    objeto:'celular',
     img: 'https://s03.s3c.es/imag/_v0/770x420/2/6/e/600x400_Motorola-One-Black-Laydown-combo-1.png',
     modelo: 'A10 pro',
     marca: 'Samsung',
@@ -25,20 +29,21 @@ let productos=[{
     año:'2020'
 
 },{
+    objeto:'celular',
     img: 'https://s03.s3c.es/imag/_v0/770x420/2/6/e/600x400_Motorola-One-Black-Laydown-combo-1.png',
     modelo: 'A11 pro',
     marca: 'Samsung',
     precio: '$320.00',
     año:'2021'
 },{
-
+    objeto:'celular',
     img: 'https://s03.s3c.es/imag/_v0/770x420/2/6/e/600x400_Motorola-One-Black-Laydown-combo-1.png',
     modelo: 'A20 pro',
     marca: 'Samsung',
     precio: '$350.00',
     año:'2021'
 },{
-
+    objeto:'celular',
     img: 'https://storephone.com.ec/wp-content/uploads/2019/09/A51.jpg',
     modelo: 'A51 pro',
     marca: 'Samsung',
@@ -46,14 +51,14 @@ let productos=[{
     año:'2021'
     
 },{
-    
+    objeto:'celular',
     img: 'https://www.lavictoria.ec/wp-content/uploads/2020/05/CELULAR-SAMSUNG-GALAXY-A01-SM-A015M-DS.-1.jpg',
     modelo: 'A01 pro',
     marca: 'Samsung',
     precio: '$400.00',
     año:'2021'
 },{
-   
+    objeto:'celular',
     img: ' https://www.eltiempo.com/files/article_content/files/crop/uploads/2020/02/03/5e38409f1bcb0.r_1580745285279.168-0-1128-720.jpeg',
     modelo: '11 pro max',
     marca: 'Iphone',
@@ -61,40 +66,47 @@ let productos=[{
     año:'2021'
 
 },{
-
+    objeto:'celular',
     img: 'https://tienda.claro.com.ec/cdn/claroec/thumbnail/000000000070033529.png',
     modelo: 'Ultra mega ',
     marca: 'Huawei',
     precio: '$400.00',
     año:'2021'
 },{
-
+    objeto:'celular',
     img: 'https://tienda.claro.com.ec/cdn/claroec/thumbnail/000000000070033529.png',
     modelo: 'Redmi Note 9 Pro',
     marca: 'Xiaomi',
     precio: '$400.00',
     año:'2021'
 },{
-
+    objeto:'celular',
     img: 'https://tienda.claro.com.ec/cdn/claroec/thumbnail/000000000070033529.png',
     modelo: 'G19',
     marca: 'Motorola',
     precio: '$400.00',
     año:'2021'
 },{
-    
+    objeto:'laptop',
     img: 'https://www.novicompu.com/11703-large_default/laptop-hp-core-i3-10ma-4gb-1tb-bt-14pulg.jpg',
     modelo: 'Dw031234',
     marca: 'HP',
     precio: '$500.00',
     año:'2018'
 },{
-    
+    objeto:'impresora', 
     img: 'https://s3.amazonaws.com/imagenes.toners.ec/wp-content/uploads/2021/01/08155324/L3110-1SD.jpg',
     modelo: 'Epson 1604',
     marca: 'HP',
     precio: '$200.00',
     año:'2018'
+},{
+    objeto:'otro',
+    img: 'https://tecnomundoec.com/wp-content/uploads/2020/05/HG8929-2.jpg',
+    modelo: 'HG8929',
+    marca: 'Marvo',
+    precio: '$45.00',
+    año:'2020'
 }];
 
 
@@ -120,14 +132,16 @@ let contenedor=document.querySelector('.grid-container')
 let codeHtml=''
 
 
+//document.getElementById('todos').style.display='none'
 
 productos.forEach(e=>{
+  
     let img=e.img;
     let modelo=e.modelo;
     let marca=e.marca;
     let precio=e.precio;
     let año=e.año;
-    console.log(img,modelo,marca,precio,año)
+    //console.log(img,modelo,marca,precio,año)
     codeHtml+=`<div class="producto__celulares" >
     <div class="producto__informacion" >
         <div class="producto__img" >
@@ -145,7 +159,8 @@ contenedor.innerHTML=codeHtml
     
 
 
-const texto=document.getElementById('texto')
+let texto=document.getElementById('texto')
+texto.style.display='none'
 texto.addEventListener('click',(e)=>{
     texto.style.border='2px solid silver'
 })
@@ -170,7 +185,7 @@ texto.addEventListener('input',(e)=>{
 })
 
 const filtrar=()=>{
-    const textoIngresado=texto.value.toLowerCase()
+    let textoIngresado=texto.value.toLowerCase()
     
     productos.forEach(e=>{
         let marca=e.marca.toLocaleLowerCase();
@@ -220,5 +235,58 @@ const noEncuentraProducto=()=>{
               </div>`; 
 
 }
+const filtrarCelulares=document.getElementById('celular')
+const filtrarTodos=document.getElementById('todos')
+const filtrarComputadores=document.getElementById('laptop')
+const filtrarimpresorass=document.getElementById('impresora')
+const cajaDeFiltrar=document.getElementById('cajafiltrar')
 
-/**/
+cajaDeFiltrar.addEventListener('click',(e)=>{
+   
+    //console.log(e)
+    if(e.target.id=='laptop'){
+        codeHtml=''
+        filtrarPorDatos('laptop')
+    }
+    else if(e.target.id=='celular'){
+        codeHtml=''
+        filtrarPorDatos('celular')
+    }else if(e.target.id=='impresora'){
+        codeHtml=''
+        filtrarPorDatos('impresora')
+    }else if(e.target.id=='otros'){
+        codeHtml=''
+        filtrarPorDatos('otro')
+    }else if(e.target.id=='todos'){
+        codeHtml=''
+        texto.style.display='initial'
+        productos.forEach(e =>{
+            
+            pintar(e)
+            document.getElementById('todos').setAttribute('disabled','')
+        })
+    }
+    contenedor.innerHTML=codeHtml
+})
+
+function filtrarPorDatos(a){
+    document.getElementById('todos').style.display='initial'
+    texto.style.display='none'
+    
+    productos.forEach(e  =>{
+        if(e.objeto==a){
+            
+            pintar(e)
+           
+            
+    }
+    contenedor.innerHTML=codeHtml
+})
+
+}
+
+       
+        
+ 
+       
+
