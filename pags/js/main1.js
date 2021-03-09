@@ -284,7 +284,7 @@ cajaDeFiltrar.addEventListener('click',(e)=>{
         codeHtml=''
         texto.style.display='initial'
         productos.forEach(e =>{
-            
+            contenedor.style.marginTop='6em'
             pintar(e)
             document.getElementById('todos').setAttribute('disabled','')
         })
@@ -294,6 +294,7 @@ cajaDeFiltrar.addEventListener('click',(e)=>{
 
 function filtrarPorDatos(a){
     texto.value=''
+    contenedor.style.marginTop='2.5em'
     document.getElementById('todos').style.display='initial'
     texto.style.display='none'
     productos.forEach(e  =>{
