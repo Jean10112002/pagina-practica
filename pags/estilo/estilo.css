@@ -93,7 +93,7 @@ nav .enlaces-header a:hover{
     max-height: 600px;
     box-shadow: 2px 2px 10px rgb(134, 132, 132);
     height: 450px;    
-    border-radius: 5em;
+    border-radius: 3em;
 }
 .producto__img{
     width: 80%;
