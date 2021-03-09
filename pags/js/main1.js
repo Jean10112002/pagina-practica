@@ -183,6 +183,29 @@ texto.addEventListener('input',(e)=>{
 
 
 })
+const buscadorLista=document.querySelector('.buscador__lista')
+const botonFiltrar=document.getElementById('boton__filtrar')
+botonFiltrar.addEventListener('click',()=>{
+    console.log('boton')
+
+    buscadorLista.classList.toggle('filter')
+    texto.style.display='none'
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const filtrar=()=>{
     let textoIngresado=texto.value.toLowerCase()
@@ -270,9 +293,9 @@ cajaDeFiltrar.addEventListener('click',(e)=>{
 })
 
 function filtrarPorDatos(a){
+    texto.value=''
     document.getElementById('todos').style.display='initial'
     texto.style.display='none'
-    
     productos.forEach(e  =>{
         if(e.objeto==a){
             
