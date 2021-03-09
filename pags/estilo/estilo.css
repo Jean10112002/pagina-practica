@@ -275,20 +275,32 @@ input[type='text']{
         width: 80%;
         margin: 0 auto;
         box-shadow: 2px 2px 10px rgb(134, 132, 132);
-        height: 300px;    
+        height: 100px;    
     }
     .producto__info{
-        padding: 0.1em;
-        min-height: 150px;
-        height: 160px;
+      
+        min-height: 100px;
+        display: initial;
+        color: black;
+        margin:0;
+        text-align: center;
+        
     }
+    
     .producto__celulares{
             margin-left: 0em;
             margin-top: 0em;
             margin: auto;
-            width: 100%;
-            min-height: 430px;
-
+            width: 80%;
+            min-height: 420px;
+            max-height: 300px;
+  
+    }
+    .producto__img{
+        height: 150px;
+    }
+    .producto__img img{
+        height: 150px;
     }
     .producto__boton{
         width: 50%;
