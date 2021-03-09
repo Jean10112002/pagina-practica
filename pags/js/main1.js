@@ -236,7 +236,7 @@ const filtrar=()=>{
 const pintar=(e)=>{
 
     console.log('entraste a la funcion papu')
-    codeHtml+=`<div class="producto__celulares">
+    codeHtml+=`<div class="producto__celulares" data-aos="fade-right">
         <div class="producto__informacion">
         <div class="producto__img">
             <img src="${e.img}" alt="">
