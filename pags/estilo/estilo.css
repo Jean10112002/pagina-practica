@@ -161,7 +161,7 @@ nav .enlaces-header a:hover{
 input[type='text']{
    
     width: 100%;
-    min-height: 2em;
+  
     height: 2.5em;
     text-align: center;
     color: #ec1c25;
@@ -207,7 +207,6 @@ input[type='text']{
        
     display: none;
     
-    
 }
 .filter{
     display: flex;
@@ -229,7 +228,7 @@ input[type='text']{
     margin-left: 1em;
     border-bottom: 2px solid tomato;
     border-radius: 1em;
-
+    
 
 }
 .buscador__lista a:hover{
@@ -244,7 +243,7 @@ input[type='text']{
     cursor: pointer;
     color:black;
     font-size: 1em;
-
+   
     border: none;
     border-bottom: 2px solid tomato;
     padding: 0.4em 1em;
