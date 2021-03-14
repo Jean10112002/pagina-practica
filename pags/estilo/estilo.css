@@ -1,388 +1,395 @@
-                                                                                                                                                                    body {
-                                                                                                                                                                    overflow-y: scroll;
-                                                                                                                                                                    margin: 0;
-                                                                                                                                                                    padding: 0;
-                                                                                                                                                                    font-family: sans-serif;
-                                                                                                                                                                    box-sizing: border-box;
-                                                                                                                                                                }
-                                                                                                                                                                /*nav*/
-                                                                                                                                                                
-                                                                                                                                                                header::before {
-                                                                                                                                                                    content: "";
-                                                                                                                                                                    margin-bottom: 100px;
-                                                                                                                                                                    display: block;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                nav {
-                                                                                                                                                                    width: 100%;
-                                                                                                                                                                    height: 90px;
-                                                                                                                                                                    background-color: #fff;
-                                                                                                                                                                    border-bottom: 1px solid transparent;
-                                                                                                                                                                    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
-                                                                                                                                                                    top: 0;
-                                                                                                                                                                    z-index: 100;
-                                                                                                                                                                    transition: ease-in-out 0.5s;
-                                                                                                                                                                    margin: 0 auto;
-                                                                                                                                                                    position: fixed;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .nav {
-                                                                                                                                                                    display: flex;
-                                                                                                                                                                    justify-content: space-between;
-                                                                                                                                                                    align-items: center;
-                                                                                                                                                                    height: 100px;
-                                                                                                                                                                    width: 90%;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .nav .logo {
-                                                                                                                                                                    height: 150px;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .nav .logo img {
-                                                                                                                                                                    height: 100%;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .enlaces-header {
-                                                                                                                                                                    font-weight: 300;
-                                                                                                                                                                    transition: ease-in-out 0.5s;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .nav .enlaces-header a {
-                                                                                                                                                                    color: #5D6678;
-                                                                                                                                                                    text-decoration: none;
-                                                                                                                                                                    margin-left: 20px;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                nav .enlaces-header .lugar {
-                                                                                                                                                                    color: #ec1c25;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                nav .enlaces-header a:hover {
-                                                                                                                                                                    color: #ec1c25;
-                                                                                                                                                                    transition: color .5s ease-in-out;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .hamburguer {
-                                                                                                                                                                    width: 80px;
-                                                                                                                                                                    height: 80px;
-                                                                                                                                                                    display: none;
-                                                                                                                                                                    text-align: center;
-                                                                                                                                                                    z-index: 100;
-                                                                                                                                                                    cursor: pointer;
-                                                                                                                                                                    /* transition: color 0.5s ease-in; */
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .hamburguer>i {
-                                                                                                                                                                    font-size: 25px;
-                                                                                                                                                                    line-height: 80px;
-                                                                                                                                                                    color: #ec1c25;
-                                                                                                                                                                }
-                                                                                                                                                                /*container*/
-                                                                                                                                                                
-                                                                                                                                                                .container {
-                                                                                                                                                                    width: 70%;
-                                                                                                                                                                    margin: auto;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .container__2 {
-                                                                                                                                                                    width: 80%;
-                                                                                                                                                                    margin: 0 auto;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .producto__celulares {
-                                                                                                                                                                    margin-left: 1em;
-                                                                                                                                                                    margin-top: 2em;
-                                                                                                                                                                    width: 100%;
-                                                                                                                                                                    min-height: 500px;
-                                                                                                                                                                    max-height: 600px;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .producto__informacion {
-                                                                                                                                                                    width: 90%;
-                                                                                                                                                                    height: 200px;
-                                                                                                                                                                    min-height: 400px;
-                                                                                                                                                                    max-height: 600px;
-                                                                                                                                                                    box-shadow: 2px 2px 10px rgb(134, 132, 132);
-                                                                                                                                                                    height: 450px;
-                                                                                                                                                                    border-radius: 2em;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .producto__img {
-                                                                                                                                                                    width: 80%;
-                                                                                                                                                                    margin: auto;
-                                                                                                                                                                    border-bottom: 3px solid silver;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .producto__img img:hover {
-                                                                                                                                                                    transform: scale(1.1);
-                                                                                                                                                                    transition: transform 1s linear;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .producto__img img {
-                                                                                                                                                                    width: 90%;
-                                                                                                                                                                    display: block;
-                                                                                                                                                                    margin: auto;
-                                                                                                                                                                    height: 200px;
-                                                                                                                                                                    object-fit: container;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .producto__info {
-                                                                                                                                                                    padding: 2em;
-                                                                                                                                                                    margin-top: 2vh;
-                                                                                                                                                                    min-height: 150px;
-                                                                                                                                                                    justify-content: space-evenly;
-                                                                                                                                                                    flex-direction: column;
-                                                                                                                                                                    color: black;
-                                                                                                                                                                    text-align: center;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .producto__info h3 {
-                                                                                                                                                                    color: black;
-                                                                                                                                                                    font-size: 1.5em;
-                                                                                                                                                                    font-weight: 600;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .grid-container {
-                                                                                                                                                                    gap: 0.1em;
-                                                                                                                                                                    width: 100%;
-                                                                                                                                                                    margin-top: 1.5em;
-                                                                                                                                                                    overflow-x: hidden;
-                                                                                                                                                                    display: grid;
-                                                                                                                                                                    height: auto;
-                                                                                                                                                                    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                                                                                                                                                                    grid-template-rows: auto;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .producto__boton {
-                                                                                                                                                                    font-size: 1.2em;
-                                                                                                                                                                    display: block;
-                                                                                                                                                                    text-decoration: none;
-                                                                                                                                                                    padding: 0.4em 1em;
-                                                                                                                                                                    border-radius: 1em;
-                                                                                                                                                                    background-color: #ec1c25;
-                                                                                                                                                                    color: white;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .producto__boton:hover {
-                                                                                                                                                                    transition: background-color 1s, color 2s linear;
-                                                                                                                                                                    background-color: rgb(230, 168, 36);
-                                                                                                                                                                    color: rgb(255, 255, 255);
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                input[type='text'] {
-                                                                                                                                                                    width: 100%;
-                                                                                                                                                                    min-height: 1em;
-                                                                                                                                                                    height: 2em;
-                                                                                                                                                                    text-align: center;
-                                                                                                                                                                    color: #ec1c25;
-                                                                                                                                                                    border: none;
-                                                                                                                                                                    border-bottom: 2px solid tomato;
-                                                                                                                                                                    font-size: 20px;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .input::placeholder {
-                                                                                                                                                                    color: red;
-                                                                                                                                                                    font-size: 20px;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .elementos {
-                                                                                                                                                                    grid-column: 1/-1;
-                                                                                                                                                                    text-align: center;
-                                                                                                                                                                    width: 100%;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .img-error {
-                                                                                                                                                                    display: block;
-                                                                                                                                                                    margin: auto;
-                                                                                                                                                                    width: 30%;
-                                                                                                                                                                    overflow: hidden;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .caja__buscadora {
-                                                                                                                                                                    width: 100%;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .caja__input {
-                                                                                                                                                                    width: 30%;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .buscador__lista {
-                                                                                                                                                                    position: absolute;
-                                                                                                                                                                    margin-top: -0.6em;
-                                                                                                                                                                    left: 0%;
-                                                                                                                                                                    position: fixed;
-                                                                                                                                                                    display: flex;
-                                                                                                                                                                    justify-content: space-evenly;
-                                                                                                                                                                    align-items: center;
-                                                                                                                                                                    flex-direction: column;
-                                                                                                                                                                    width: 20%;
-                                                                                                                                                                    border-radius: 1em;
-                                                                                                                                                                    background-color: rgba(0, 0, 0, 0.692);
-                                                                                                                                                                    /* left: -1000%; */
-                                                                                                                                                                    clip-path: circle(0.2% at 0 0);
-                                                                                                                                                                    height: 100vh;
-                                                                                                                                                                    transition: all .9s linear;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .filter {
-                                                                                                                                                                    clip-path: circle(150% at 100% 0);
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .buscador__lista a {
-                                                                                                                                                                    margin-top: 2em;
-                                                                                                                                                                    text-decoration: none;
-                                                                                                                                                                    font-size: 1.5em;
-                                                                                                                                                                    padding: 0.5em 1em;
-                                                                                                                                                                    cursor: pointer;
-                                                                                                                                                                    color: rgb(223, 223, 223);
-                                                                                                                                                                    text-align: center;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .buscador__lista a i {
-                                                                                                                                                                    font-size: 1em;
-                                                                                                                                                                    color: #ec1c25;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .buscador__lista a:hover {
-                                                                                                                                                                    color: #ec1c25;
-                                                                                                                                                                    transition: color .5s ease-in-out;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .filter__icon {
-                                                                                                                                                                    cursor: pointer;
-                                                                                                                                                                    border-radius: 1em;
-                                                                                                                                                                    position: absolute;
-                                                                                                                                                                    left: 3%;
-                                                                                                                                                                    width: 5%;
-                                                                                                                                                                    position: fixed;
-                                                                                                                                                                    z-index: 90;
-                                                                                                                                                                    margin-top: 1em;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                .filter__icon i {
-                                                                                                                                                                    font-size: 2em;
-                                                                                                                                                                    color: #ec1c25;
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                @media screen and (max-width:636px) {
-                                                                                                                                                                    .enlaces-header {
-                                                                                                                                                                        position: fixed;
-                                                                                                                                                                        background: #FF416C;
-                                                                                                                                                                        /* fallback for old browsers */
-                                                                                                                                                                        background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-                                                                                                                                                                        /* Chrome 10-25, Safari 5.1-6 */
-                                                                                                                                                                        background: linear-gradient(to right, #FF4B2B, #FF416C);
-                                                                                                                                                                        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-                                                                                                                                                                        top: 0;
-                                                                                                                                                                        right: 0;
-                                                                                                                                                                        width: 100%;
-                                                                                                                                                                        height: 100vh;
-                                                                                                                                                                        display: flex;
-                                                                                                                                                                        align-items: center;
-                                                                                                                                                                        flex-direction: column;
-                                                                                                                                                                        justify-content: space-evenly;
-                                                                                                                                                                        clip-path: circle(0.0% at 100% 0);
-                                                                                                                                                                        color: black
-                                                                                                                                                                    }
-                                                                                                                                                                    .nav .menudos {
-                                                                                                                                                                        -webkit-clip-path: circle(150% at 100% 0);
-                                                                                                                                                                        clip-path: circle(150% at 100% 0);
-                                                                                                                                                                    }
-                                                                                                                                                                    .nav .enlaces-header a {
-                                                                                                                                                                        color: white;
-                                                                                                                                                                        font-size: 20px;
-                                                                                                                                                                    }
-                                                                                                                                                                    .hamburguer {
-                                                                                                                                                                        display: block;
-                                                                                                                                                                    }
-                                                                                                                                                                    .nav .logo {
-                                                                                                                                                                        height: 100px;
-                                                                                                                                                                    }
-                                                                                                                                                                    .container,
-                                                                                                                                                                    .container__2 {
-                                                                                                                                                                        width: 100%;
-                                                                                                                                                                    }
-                                                                                                                                                                    .grid-container {
-                                                                                                                                                                        margin-top: 6em;
-                                                                                                                                                                        gap: 0.1em;
-                                                                                                                                                                        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-                                                                                                                                                                        grid-auto-rows: 1fr;
-                                                                                                                                                                    }
-                                                                                                                                                                    .producto__informacion {
-                                                                                                                                                                        width: 65%;
-                                                                                                                                                                        margin: 0 auto;
-                                                                                                                                                                        margin-top: 1em;
-                                                                                                                                                                        box-shadow: 2px 2px 10px rgb(134, 132, 132);
-                                                                                                                                                                        height: 100px;
-                                                                                                                                                                        min-height: 200px;
-                                                                                                                                                                    }
-                                                                                                                                                                    .producto__info {
-                                                                                                                                                                        margin-top: 0;
-                                                                                                                                                                        padding: 0.1em;
-                                                                                                                                                                        min-height: 50px;
-                                                                                                                                                                        height: 50px;
-                                                                                                                                                                    }
-                                                                                                                                                                    .producto__celulares {
-                                                                                                                                                                        margin-left: 0em;
-                                                                                                                                                                        margin-top: 0em;
-                                                                                                                                                                        margin: auto;
-                                                                                                                                                                        width: 100%;
-                                                                                                                                                                        min-height: 100px;
-                                                                                                                                                                    }
-                                                                                                                                                                    .producto__img {
-                                                                                                                                                                        width: 60%;
-                                                                                                                                                                        height: 35%;
-                                                                                                                                                                    }
-                                                                                                                                                                    .producto__img img {
-                                                                                                                                                                        width: 100%;
-                                                                                                                                                                        height: 100%;
-                                                                                                                                                                    }
-                                                                                                                                                                    .producto__boton {
-                                                                                                                                                                        width: 60%;
-                                                                                                                                                                        padding: .5em 1em;
-                                                                                                                                                                        margin: 0 auto;
-                                                                                                                                                                        border-radius: 1.5em;
-                                                                                                                                                                        font-size: .6em;
-                                                                                                                                                                    }
-                                                                                                                                                                    input[type='text'] {
-                                                                                                                                                                        width: 100%;
-                                                                                                                                                                        min-height: 1em;
-                                                                                                                                                                        height: 1.5em;
-                                                                                                                                                                        text-align: center;
-                                                                                                                                                                        color: #ec1c25;
-                                                                                                                                                                        border: none;
-                                                                                                                                                                        border-bottom: 2px solid tomato;
-                                                                                                                                                                        border-radius: 1em;
-                                                                                                                                                                        font-size: 20px;
-                                                                                                                                                                    }
-                                                                                                                                                                    .buscador__lista a {
-                                                                                                                                                                        font-size: 1.3em;
-                                                                                                                                                                    }
-                                                                                                                                                                    .filter__icon {
-                                                                                                                                                                        margin-left: -2.5%;
-                                                                                                                                                                        font-size: .5em;
-                                                                                                                                                                    }
-                                                                                                                                                                    .buscador__lista {
-                                                                                                                                                                        width: 50%;
-                                                                                                                                                                    }
-                                                                                                                                                                    .producto__info h3 {
-                                                                                                                                                                        color: black;
-                                                                                                                                                                        font-size: 1em;
-                                                                                                                                                                        font-weight: 600;
-                                                                                                                                                                    }
-                                                                                                                                                                }
-                                                                                                                                                                
-                                                                                                                                                                @media screen and (max-width:390px) {
-                                                                                                                                                                    .producto__informacion {
-                                                                                                                                                                        width: 75%;
-                                                                                                                                                                    }
-                                                                                                                                                                    .grid-container {
-                                                                                                                                                                        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-                                                                                                                                                                    }
-                                                                                                                                                                    .filter__icon {
-                                                                                                                                                                        margin-left: -2.5%;
-                                                                                                                                                                        font-size: .7em;
-                                                                                                                                                                    }
-                                                                                                                                                                    .producto__boton {
-                                                                                                                                                                        font-size: .7em;
-                                                                                                                                                                    }
+        body {
+        overflow-y: scroll;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+    }
+    /*nav*/
+    
+    header::before {
+        content: "";
+        margin-bottom: 100px;
+        display: block;
+    }
+    
+    nav {
+        width: 100%;
+        height: 90px;
+        background-color: #fff;
+        border-bottom: 1px solid transparent;
+        box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
+        top: 0;
+        z-index: 100;
+        transition: ease-in-out 0.5s;
+        margin: 0 auto;
+        position: fixed;
+    }
+    
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 90%;
+    }
+    
+    .nav .logo {
+        height: 150px;
+    }
+    
+    .nav .logo img {
+        height: 100%;
+    }
+    
+    .enlaces-header {
+        font-weight: 300;
+        transition: ease-in-out 0.5s;
+    }
+    
+    .nav .enlaces-header a {
+        color: #5D6678;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+    
+    nav .enlaces-header .lugar {
+        color: #ec1c25;
+    }
+    
+    nav .enlaces-header a:hover {
+        color: #ec1c25;
+        transition: color .5s ease-in-out;
+    }
+    
+    .hamburguer {
+        width: 80px;
+        height: 80px;
+        display: none;
+        text-align: center;
+        z-index: 100;
+        cursor: pointer;
+        /* transition: color 0.5s ease-in; */
+    }
+    
+    .hamburguer>i {
+        font-size: 25px;
+        line-height: 80px;
+        color: #ec1c25;
+    }
+    /*container*/
+    
+    .container {
+        width: 70%;
+        margin: auto;
+    }
+    
+    .container__2 {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .producto__celulares {
+        margin-left: 1em;
+        margin-top: 2em;
+        width: 100%;
+        min-height: 500px;
+        max-height: 600px;
+    }
+    
+    .producto__informacion {
+        width: 90%;
+        height: 200px;
+        min-height: 400px;
+        max-height: 600px;
+        box-shadow: 2px 2px 10px rgb(134, 132, 132);
+        height: 450px;
+        border-radius: 2em;
+    }
+    
+    .producto__img {
+        width: 80%;
+        margin: auto;
+        border-bottom: 3px solid silver;
+    }
+    
+    .producto__img img:hover {
+        transform: scale(1.1);
+        transition: transform 1s linear;
+    }
+    
+    .producto__img img {
+        width: 90%;
+        display: block;
+        margin: auto;
+        height: 200px;
+        object-fit: container;
+    }
+    
+    .producto__info {
+        padding: 2em;
+        margin-top: 2vh;
+        min-height: 150px;
+        justify-content: space-evenly;
+        flex-direction: column;
+        color: black;
+        text-align: center;
+    }
+    
+    .producto__info h3 {
+        color: black;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+    
+    .grid-container {
+        gap: 0.1em;
+        width: 100%;
+        margin-top: 1.5em;
+        overflow-x: hidden;
+        display: grid;
+        height: auto;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: auto;
+    }
+    
+    .producto__boton {
+        font-size: 1.2em;
+        display: block;
+        text-decoration: none;
+        padding: 0.4em 1em;
+        border-radius: 1em;
+        background-color: #ec1c25;
+        color: white;
+    }
+    
+    .producto__boton:hover {
+        transition: background-color 1s, color 2s linear;
+        background-color: rgb(230, 168, 36);
+        color: rgb(255, 255, 255);
+    }
+    
+    input[type='text'] {
+        width: 100%;
+        min-height: 1em;
+        height: 2em;
+        text-align: center;
+        color: #ec1c25;
+        border: none;
+        border-bottom: 2px solid tomato;
+        font-size: 20px;
+    }
+    
+    .input::placeholder {
+        color: red;
+        font-size: 20px;
+    }
+    
+    .elementos {
+        grid-column: 1/-1;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .img-error {
+        display: block;
+        margin: auto;
+        width: 30%;
+        overflow: hidden;
+    }
+    
+    .caja__buscadora {
+        width: 100%;
+    }
+    
+    .caja__input {
+        width: 30%;
+    }
+    
+    .buscador__lista {
+        position: absolute;
+        margin-top: -0.6em;
+        left: 0%;
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        width: 20%;
+        border-radius: 1em;
+        background-color: rgba(0, 0, 0, 0.692);
+        /* left: -1000%; */
+        clip-path: circle(0.2% at 0 0);
+        height: 90vh;
+        transition: all .9s linear;
+    }
+    
+    .filter {
+        clip-path: circle(150% at 100% 0);
+    }
+    
+    .buscador__lista a {
+        margin-top: 2em;
+        text-decoration: none;
+        font-size: 1.5em;
+        padding: 0.5em 1em;
+        cursor: pointer;
+        color: rgb(223, 223, 223);
+        text-align: center;
+    }
+    
+    .buscador__lista a i {
+        font-size: 1em;
+        color: #ec1c25;
+    }
+    
+    .buscador__lista a:hover {
+        color: #ec1c25;
+        transition: color .5s ease-in-out;
+    }
+    
+    .filter__icon {
+        cursor: pointer;
+        border-radius: 1em;
+        position: absolute;
+        left: 3%;
+        width: 5%;
+        position: fixed;
+        z-index: 90;
+        margin-top: 1em;
+    }
+    
+    .filter__icon i {
+        font-size: 2em;
+        color: #ec1c25;
+    }
+    
+    @media screen and (max-width:636px) {
+        .enlaces-header {
+            position: fixed;
+            background: #FF416C;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FF4B2B, #FF416C);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            clip-path: circle(0.0% at 100% 0);
+            color: black
+        }
+        .nav .menudos {
+            -webkit-clip-path: circle(150% at 100% 0);
+            clip-path: circle(150% at 100% 0);
+        }
+        .nav .enlaces-header a {
+            color: white;
+            font-size: 20px;
+        }
+        .hamburguer {
+            display: block;
+        }
+        .nav .logo {
+            height: 100px;
+        }
+        .container,
+        .container__2 {
+            width: 100%;
+        }
+        .grid-container {
+            margin-top: 6em;
+            gap: 0.1em;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            grid-auto-rows: 1fr;
+        }
+        .producto__informacion {
+            width: 65%;
+            margin: 0 auto;
+            margin-top: 1em;
+            box-shadow: 2px 2px 10px rgb(134, 132, 132);
+            height: 100px;
+            min-height: 200px;
+        }
+        .producto__info {
+            margin-top: 0;
+            padding: 0.1em;
+            min-height: 50px;
+            height: 50px;
+        }
+        .producto__celulares {
+            margin-left: 0em;
+            margin-top: 0em;
+            margin: auto;
+            width: 100%;
+            min-height: 100px;
+        }
+        .producto__img {
+            width: 60%;
+            height: 35%;
+        }
+        .producto__img img {
+            width: 100%;
+            height: 100%;
+        }
+        .producto__boton {
+            width: 60%;
+            padding: .5em 1em;
+            margin: 0 auto;
+            border-radius: 1.5em;
+            font-size: .6em;
+        }
+        input[type='text'] {
+            width: 100%;
+            min-height: 1em;
+            height: 1.5em;
+            text-align: center;
+            color: #ec1c25;
+            border: none;
+            border-bottom: 2px solid tomato;
+            border-radius: 1em;
+            font-size: 20px;
+        }
+        .buscador__lista a {
+            font-size: 1.3em;
+        }
+        .filter__icon {
+            margin-left: -2.5%;
+            font-size: .5em;
+        }
+        .buscador__lista {
+            width: 50%;
+            height: 91vh;
+        }
+        .producto__info h3 {
+            color: black;
+            font-size: 1em;
+            font-weight: 600;
+        }
+    }
+    
+    @media screen and (max-width:390px) {
+        .producto__informacion {
+            width: 75%;
+           
+        }
+        .grid-container {
+           
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        }
+        .filter__icon {
+            margin-left: -2.5%;
+            font-size: .7em;
+        }
+        .producto__boton {
+            font-size: .7em;
+        }
+        .buscador__lista {
+           
+            height: 88vh;
+        }
