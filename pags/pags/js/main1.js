@@ -1,126 +1,124 @@
-
-let productos=[{
-    objeto:'celular',
-    img:'img/1.png',
+let productos = [{
+    objeto: 'celular',
+    img: 'img/1.png',
     modelo: 'Note 8 pro',
     marca: 'Huawei',
     precio: '$345.00',
-    año:'2020'
-},{
-    objeto:'celular',
-    img:'img/1.png',
+    año: '2020'
+}, {
+    objeto: 'celular',
+    img: 'img/1.png',
     modelo: 'Note 1 pro',
     marca: 'Huawei',
     precio: '$321.00',
-    año:'2020'
-},{
-    objeto:'celular',
-    img:'img/1.png',
+    año: '2020'
+}, {
+    objeto: 'celular',
+    img: 'img/1.png',
     modelo: 'Note 2 pro',
     marca: 'Huawei',
     precio: '$324.00',
-    año:'2020'
-},{
-    objeto:'celular',
-    img:'img/1.png',
+    año: '2020'
+}, {
+    objeto: 'celular',
+    img: 'img/1.png',
     modelo: 'A10 pro',
     marca: 'Samsung',
     precio: '$300.00',
-    año:'2020'
+    año: '2020'
 
-},{
-    objeto:'celular',
-    img:'img/1.png',
+}, {
+    objeto: 'celular',
+    img: 'img/1.png',
     modelo: 'A11 pro',
     marca: 'Samsung',
     precio: '$320.00',
-    año:'2021'
-},{
-    objeto:'celular',
-    img:'img/1.png',
+    año: '2021'
+}, {
+    objeto: 'celular',
+    img: 'img/1.png',
     modelo: 'A20 pro',
     marca: 'Samsung',
     precio: '$350.00',
-    año:'2021'
-},{
-    objeto:'celular',
+    año: '2021'
+}, {
+    objeto: 'celular',
     img: 'img/2.png',
     modelo: 'A51 pro',
     marca: 'Samsung',
     precio: '$350.00',
-    año:'2021'
-    
-},{
-    objeto:'celular',
+    año: '2021'
+
+}, {
+    objeto: 'celular',
     img: 'img/2.png',
     modelo: 'A01 pro',
     marca: 'Samsung',
     precio: '$400.00',
-    año:'2021'
-},{
-    objeto:'celular',
+    año: '2021'
+}, {
+    objeto: 'celular',
     img: 'img/2.png',
     modelo: '11 pro max',
     marca: 'Iphone',
     precio: '$800.00',
-    año:'2021'
+    año: '2021'
 
-},{
-    objeto:'celular',
+}, {
+    objeto: 'celular',
     img: 'https://tienda.claro.com.ec/cdn/claroec/thumbnail/000000000070033529.png',
     modelo: 'Ultra mega ',
     marca: 'Huawei',
     precio: '$400.00',
-    año:'2021'
-},{
-    objeto:'celular',
+    año: '2021'
+}, {
+    objeto: 'celular',
     img: 'https://tienda.claro.com.ec/cdn/claroec/thumbnail/000000000070033529.png',
     modelo: 'Redmi Note 9 Pro',
     marca: 'Xiaomi',
     precio: '$400.00',
-    año:'2021'
-},{
-    objeto:'celular',
+    año: '2021'
+}, {
+    objeto: 'celular',
     img: 'https://tienda.claro.com.ec/cdn/claroec/thumbnail/000000000070033529.png',
     modelo: 'G19',
     marca: 'Motorola',
     precio: '$400.00',
-    año:'2021'
-},{
-    objeto:'laptop',
+    año: '2021'
+}, {
+    objeto: 'laptop',
     img: 'img/3.png',
     modelo: 'Dw031234',
     marca: 'HP',
     precio: '$500.00',
-    año:'2018'
-},{
-    objeto:'impresora', 
+    año: '2018'
+}, {
+    objeto: 'impresora',
     img: 'img/4.png',
     modelo: 'Epson 1604',
     marca: 'HP',
     precio: '$200.00',
-    año:'2018'
-},{
-    objeto:'otro',
+    año: '2018'
+}, {
+    objeto: 'otro',
     img: 'img/5.png',
     modelo: 'HG8929',
     marca: 'Marvo',
     precio: '$45.00',
-    año:'2020'
+    año: '2020'
 }];
 
 
 let enlacesHeader = document.querySelectorAll(".enlaces-header")[0];
 let semaforo = true;
-document.querySelectorAll(".hamburguer")[0].addEventListener("click", function(){
-   if(semaforo){
-       document.querySelectorAll(".hamburguer > i")[0].style.color="white";
-       semaforo=false;
-   }
-   else{
-       document.querySelectorAll(".hamburguer > i")[0].style.color="#ec1c25";
-       semaforo=true;
-   }
+document.querySelectorAll(".hamburguer")[0].addEventListener("click", function() {
+    if (semaforo) {
+        document.querySelectorAll(".hamburguer > i")[0].style.color = "white";
+        semaforo = false;
+    } else {
+        document.querySelectorAll(".hamburguer > i")[0].style.color = "#ec1c25";
+        semaforo = true;
+    }
     enlacesHeader.classList.toggle("menudos")
 })
 
@@ -128,21 +126,21 @@ document.querySelectorAll(".hamburguer")[0].addEventListener("click", function()
 
 
 
-let contenedor=document.querySelector('.grid-container')
-let codeHtml=''
+let contenedor = document.querySelector('.grid-container')
+let codeHtml = ''
 
 
 //document.getElementById('todos').style.display='none'
 
-productos.forEach(e=>{
-  
-    let img=e.img;
-    let modelo=e.modelo;
-    let marca=e.marca;
-    let precio=e.precio;
-    let año=e.año;
+productos.forEach(e => {
+
+    let img = e.img;
+    let modelo = e.modelo;
+    let marca = e.marca;
+    let precio = e.precio;
+    let año = e.año;
     //console.log(img,modelo,marca,precio,año)
-    codeHtml+=`<div class="producto__celulares" >
+    codeHtml += `<div class="producto__celulares" >
     <div class="producto__informacion" >
         <div class="producto__img" >
             <img src="${img}" alt="">
@@ -155,14 +153,15 @@ productos.forEach(e=>{
 </div>`;
 })
 
-contenedor.innerHTML=codeHtml
-    
+contenedor.innerHTML = codeHtml
 
 
-let texto=document.getElementById('texto')
-texto.style.display='none'
-texto.addEventListener('click',(e)=>{
-    texto.style.border='2px solid silver'
+
+let texto = document.getElementById('texto')
+texto.style.display = 'none'
+texto.addEventListener('click', (e) => {
+    texto.style.border = 'none';
+    texto.style.borderBottom = '2px solid tomato';
 })
 
 /*texto.addEventListener('keypress',(e)=>{
@@ -176,20 +175,31 @@ texto.addEventListener('click',(e)=>{
 
 
 
-texto.addEventListener('input',(e)=>{
+texto.addEventListener('input', (e) => {
+
+    texto.style.borderBottom = '2px solid tomato';
     console.log(texto.value)
-    codeHtml=''
+    codeHtml = ''
     filtrar()
 
 
 })
-const buscadorLista=document.querySelector('.buscador__lista')
-const botonFiltrar=document.getElementById('boton__filtrar')
-botonFiltrar.addEventListener('click',()=>{
+let semaforo2 = false;
+const buscadorLista = document.querySelector('.buscador__lista')
+const botonFiltrar = document.getElementById('boton__filtrar')
+botonFiltrar.addEventListener('click', () => {
+
     console.log('boton')
 
+    if (semaforo2) {
+        document.querySelector('#boton__filtrar i').style.color = '#ec1c25';
+        semaforo2 = false;
+    } else {
+        document.querySelector('#boton__filtrar i').style.color = 'white';
+        semaforo2 = true;
+    }
     buscadorLista.classList.toggle('filter')
-    texto.style.display='none'
+
 
 })
 
@@ -207,36 +217,36 @@ botonFiltrar.addEventListener('click',()=>{
 
 
 
-const filtrar=()=>{
-    let textoIngresado=texto.value.toLowerCase()
-    
-    productos.forEach(e=>{
-        let marca=e.marca.toLocaleLowerCase();
-        let modelo=e.modelo.toLocaleLowerCase()
-      
-        if(marca.indexOf(textoIngresado) !==-1 ){
-           
-          pintar(e)
-    
-    }else if(modelo.indexOf(textoIngresado) !==-1){
-            
-          pintar(e)
-   
-    }
-    
+const filtrar = () => {
+    let textoIngresado = texto.value.toLowerCase()
+
+    productos.forEach(e => {
+        let marca = e.marca.toLocaleLowerCase();
+        let modelo = e.modelo.toLocaleLowerCase()
+
+        if (marca.indexOf(textoIngresado) !== -1) {
+
+            pintar(e)
+
+        } else if (modelo.indexOf(textoIngresado) !== -1) {
+
+            pintar(e)
+
+        }
+
     })
-    
-    if(codeHtml==''){
+
+    if (codeHtml == '') {
         console.log('no hay elemtno')
         noEncuentraProducto()
     }
-    contenedor.innerHTML=codeHtml
-    
+    contenedor.innerHTML = codeHtml
+
 }
-const pintar=(e)=>{
+const pintar = (e) => {
 
     console.log('entraste a la funcion papu')
-    codeHtml+=`<div class="producto__celulares">
+    codeHtml += `<div class="producto__celulares" data-aos="fade-right">
         <div class="producto__informacion">
         <div class="producto__img">
             <img src="${e.img}" alt="">
@@ -248,68 +258,63 @@ const pintar=(e)=>{
         </div>
     </div>
 </div>`;
-    
+
 }
-const noEncuentraProducto=()=>{
-    codeHtml=`<div class="elementos" >
+const noEncuentraProducto = () => {
+    codeHtml = `<div class="elementos" >
                 <h2>Poducto no encontrado</h2>
                   <img src="https://i.pinimg.com/564x/26/b8/84/26b8840bf90d9f66ebe9f48c458ff9d1.jpg" class="img-error">
                 <h2>La pagina está sufriendo ansiedad, no existe tu busqueda</h2>
-              </div>`; 
+              </div>`;
 
 }
-const filtrarCelulares=document.getElementById('celular')
-const filtrarTodos=document.getElementById('todos')
-const filtrarComputadores=document.getElementById('laptop')
-const filtrarimpresorass=document.getElementById('impresora')
-const cajaDeFiltrar=document.getElementById('cajafiltrar')
+const filtrarCelulares = document.getElementById('celular')
+const filtrarTodos = document.getElementById('todos')
+const filtrarComputadores = document.getElementById('laptop')
+const filtrarimpresorass = document.getElementById('impresora')
+const cajaDeFiltrar = document.getElementById('cajafiltrar')
 
-cajaDeFiltrar.addEventListener('click',(e)=>{
-   
+cajaDeFiltrar.addEventListener('click', (e) => {
+
     //console.log(e)
-    if(e.target.id=='laptop'){
-        codeHtml=''
+    if (e.target.id == 'laptop') {
+        codeHtml = ''
         filtrarPorDatos('laptop')
-    }
-    else if(e.target.id=='celular'){
-        codeHtml=''
+    } else if (e.target.id == 'celular') {
+        codeHtml = ''
         filtrarPorDatos('celular')
-    }else if(e.target.id=='impresora'){
-        codeHtml=''
+    } else if (e.target.id == 'impresora') {
+        codeHtml = ''
         filtrarPorDatos('impresora')
-    }else if(e.target.id=='otros'){
-        codeHtml=''
+    } else if (e.target.id == 'otros') {
+        codeHtml = ''
         filtrarPorDatos('otro')
-    }else if(e.target.id=='todos'){
-        codeHtml=''
-        texto.style.display='initial'
-        productos.forEach(e =>{
-            
+    } else if (e.target.id == 'todos') {
+        codeHtml = ''
+        texto.style.display = 'initial'
+        productos.forEach(e => {
+            contenedor.style.marginTop = '6em'
             pintar(e)
-            document.getElementById('todos').setAttribute('disabled','')
+            document.getElementById('todos').setAttribute('disabled', '')
         })
     }
-    contenedor.innerHTML=codeHtml
+    contenedor.innerHTML = codeHtml
 })
 
-function filtrarPorDatos(a){
-    texto.value=''
-    document.getElementById('todos').style.display='initial'
-    texto.style.display='none'
-    productos.forEach(e  =>{
-        if(e.objeto==a){
-            
+function filtrarPorDatos(a) {
+    texto.value = ''
+
+    contenedor.style.marginTop = '2.5em'
+    document.getElementById('todos').style.display = 'initial'
+    texto.style.display = 'none'
+    productos.forEach(e => {
+        if (e.objeto == a) {
+
             pintar(e)
-           
-            
-    }
-    contenedor.innerHTML=codeHtml
-})
+
+
+        }
+        contenedor.innerHTML = codeHtml
+    })
 
 }
-
-       
-        
- 
-       
-

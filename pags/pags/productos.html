@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   
-    <link rel="icon" href="img/logo2.png">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="estilo/estilo.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 </head>
+
 <body>
     <header>
         <nav>
@@ -17,9 +18,11 @@
                 <div class="logo">
                     <img src="img/logo2.png" alt="Logo Compu Store">
                 </div>
-                
+                <div class="caja__input">
+                    <input type="text" id="texto" class="input" placeholder="Buscar">
+                </div>
                 <div class="enlaces-header">
-                    <a href="../index" >Inicio</a>
+                    <a href="../index">Inicio</a>
                     <a href="quienessomos">Quienes Somos</a>
                     <a href="contacto">Contactos</a>
                     <a href="productos" class="lugar">Productos</a>
@@ -30,32 +33,33 @@
             </section>
         </nav>
     </header>
-    <div class="container__2">  
-     
-            <div class="caja__buscadora">
-                <did id="cajafiltrar">
-                    <div class="filter__icon">
-                        <button id="boton__filtrar">Filtrar Productos <i class="fas fa-sort-amount-down-alt"></i></button>
-                    </div>
-                    <div class="buscador__lista">
-                        <a id="todos">Todos los productos</a>
-                        <a id="celular">Celulares</a>
-                        <a id="laptop"> Computadoras</a>
-                        <a id="impresora">Impresoras</a>
-                        <a id="otros">Otros productos</a>
-                     </div>
-                    <div class="caja__input">
-                         <input type="text" id="texto" class="input" placeholder="Buscar">
-                    </div>
-                 </div>
-                
+    <div class="container__2">
+
+        <div class="caja__buscadora">
+            <did id="cajafiltrar">
+                <div class="filter__icon" id="boton__filtrar">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="buscador__lista">
+                    <a id="todos">Todos los productos</a>
+                    <a id="celular">Celulares</a>
+                    <a id="laptop"> Computadoras</a>
+                    <a id="impresora">Impresoras</a>
+                    <a id="otros">Otros productos</a>
+                </div>
+
+        </div>
+
 
         <div class="grid-container">
-                
-        </div> 
+
+        </div>
     </div>
-            
+
 
     <script src="js/main1.js"></script>
+
+
 </body>
+
 </html>
