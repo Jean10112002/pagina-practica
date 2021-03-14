@@ -160,7 +160,8 @@ contenedor.innerHTML = codeHtml
 let texto = document.getElementById('texto')
 texto.style.display = 'none'
 texto.addEventListener('click', (e) => {
-    texto.style.border = '2px solid silver'
+    texto.style.border = 'none';
+    texto.style.borderBottom = '2px solid tomato';
 })
 
 /*texto.addEventListener('keypress',(e)=>{
