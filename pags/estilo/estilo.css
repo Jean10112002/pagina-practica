@@ -217,7 +217,7 @@
         flex-direction: column;
         width: 20%;
      
-        background-color:#0000006c;
+        background-color:#ec1c26a8;
         /* left: -1000%; */
         clip-path: circle(0.2% at 0 0);
         height: 80vh;
@@ -229,7 +229,7 @@
     }
     
     .buscador__lista a {
-        margin-top: 2em;
+        margin-top: 1em;
         text-decoration: none;
         font-size: 1.5em;
         padding: 0.5em 1em;
@@ -403,3 +403,7 @@
            
             height: 75vh;
         }
+        .buscador__lista a{
+           margin-top: 0em;
+        }
+    }
