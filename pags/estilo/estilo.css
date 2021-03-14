@@ -221,7 +221,7 @@
         /* left: -1000%; */
         clip-path: circle(0.2% at 0 0);
         height: 80vh;
-        transition: all .9s linear;
+        transition: all .3s linear;
     }
     
     .filter {
