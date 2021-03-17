@@ -1,9 +1,7 @@
-
-
-
-//menu let ubicacionprincipal = window.pageYOffset; //0
-let ubicacionprincipal = window.pageYOffset; //0
 AOS.init();
+
+
+let ubicacionprincipal = window.pageYOffset; //0
 window.addEventListener("scroll" ,function(){
     let desplazamientoactual= window.pageYOffset; //1
     if(ubicacionprincipal>=desplazamientoactual){ 

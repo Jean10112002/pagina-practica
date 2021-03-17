@@ -1,112 +1,108 @@
-let productos = [{
-    objeto: 'celular',
-    img: 'img/1.png',
-    modelo: 'Note 8 pro',
-    marca: 'Huawei',
-    precio: '$345.00',
-    año: '2020'
-}, {
-    objeto: 'celular',
-    img: 'img/1.png',
-    modelo: 'Note 1 pro',
-    marca: 'Huawei',
-    precio: '$321.00',
-    año: '2020'
-}, {
-    objeto: 'celular',
-    img: 'img/1.png',
-    modelo: 'Note 2 pro',
-    marca: 'Huawei',
-    precio: '$324.00',
-    año: '2020'
-}, {
-    objeto: 'celular',
-    img: 'img/1.png',
-    modelo: 'A10 pro',
-    marca: 'Samsung',
-    precio: '$300.00',
-    año: '2020'
+const filtrarPorDatos=(a)=>{
+    texto.value = ''
 
-}, {
-    objeto: 'celular',
-    img: 'img/1.png',
-    modelo: 'A11 pro',
-    marca: 'Samsung',
-    precio: '$320.00',
-    año: '2021'
-}, {
-    objeto: 'celular',
-    img: 'img/1.png',
-    modelo: 'A20 pro',
-    marca: 'Samsung',
-    precio: '$350.00',
-    año: '2021'
-}, {
-    objeto: 'celular',
-    img: 'img/2.png',
-    modelo: 'A51 pro',
-    marca: 'Samsung',
-    precio: '$350.00',
-    año: '2021'
+    contenedor.style.marginTop = '2.5em'
+    document.getElementById('todos').style.display = 'initial'
+    texto.style.display = 'none'
+    data.forEach(e => {
+        if (e.objeto == a) {
 
-}, {
-    objeto: 'celular',
-    img: 'img/2.png',
-    modelo: 'A01 pro',
-    marca: 'Samsung',
-    precio: '$400.00',
-    año: '2021'
-}, {
-    objeto: 'celular',
-    img: 'img/2.png',
-    modelo: '11 pro max',
-    marca: 'Iphone',
-    precio: '$800.00',
-    año: '2021'
+            pintar(e)
 
-}, {
-    objeto: 'celular',
-    img: 'https://tienda.claro.com.ec/cdn/claroec/thumbnail/000000000070033529.png',
-    modelo: 'Ultra mega ',
-    marca: 'Huawei',
-    precio: '$400.00',
-    año: '2021'
-}, {
-    objeto: 'celular',
-    img: 'https://tienda.claro.com.ec/cdn/claroec/thumbnail/000000000070033529.png',
-    modelo: 'Redmi Note 9 Pro',
-    marca: 'Xiaomi',
-    precio: '$400.00',
-    año: '2021'
-}, {
-    objeto: 'celular',
-    img: 'https://tienda.claro.com.ec/cdn/claroec/thumbnail/000000000070033529.png',
-    modelo: 'G19',
-    marca: 'Motorola',
-    precio: '$400.00',
-    año: '2021'
-}, {
-    objeto: 'laptop',
-    img: 'img/3.png',
-    modelo: 'Dw031234',
-    marca: 'HP',
-    precio: '$500.00',
-    año: '2018'
-}, {
-    objeto: 'impresora',
-    img: 'img/4.png',
-    modelo: 'Epson 1604',
-    marca: 'HP',
-    precio: '$200.00',
-    año: '2018'
-}, {
-    objeto: 'otro',
-    img: 'img/5.png',
-    modelo: 'HG8929',
-    marca: 'Marvo',
-    precio: '$45.00',
-    año: '2020'
-}];
+
+        }
+        contenedor.innerHTML = codeHtml
+    })
+
+}
+const filtrar = () => {
+    let textoIngresado = texto.value.toLowerCase()
+
+    data.forEach(e => {
+        let marca = e.marca.toLocaleLowerCase();
+        let modelo = e.modelo.toLocaleLowerCase()
+
+        if (marca.indexOf(textoIngresado) !== -1) {
+
+            pintar(e)
+
+        } else if (modelo.indexOf(textoIngresado) !== -1) {
+
+            pintar(e)
+
+        }
+
+    })
+
+    if (codeHtml == '') {
+        console.log('no hay elemtno')
+        noEncuentraProducto()
+    }
+    contenedor.innerHTML = codeHtml
+
+}
+const pintar = (e) => {
+
+    console.log('entraste a la funcion papu')
+    codeHtml += `<div class="producto__celulares" >
+        <div class="producto__informacion">
+        <div class="producto__img">
+            <img src="${e.img}" alt="">
+        </div>
+         <div class="producto__info">
+            <h3>${e.marca} ${e.modelo}</h3>
+            <h3></h3>
+            <a  class="producto__boton" id='${e.modelo}' >Más información</a>
+        </div>
+    </div>
+</div>`;
+
+}
+const noEncuentraProducto = () => {
+    codeHtml = `<div class="elementos" >
+                <h2>Poducto no encontrado</h2>
+                  <img src="https://i.pinimg.com/564x/26/b8/84/26b8840bf90d9f66ebe9f48c458ff9d1.jpg" class="img-error">
+                <h2>La pagina está sufriendo ansiedad, no existe tu busqueda</h2>
+              </div>`;
+
+}
+
+let data;
+const buscarProductos=async()=>{
+    try {
+        const res=await fetch('js/productos.json')
+        data=await res.json()
+        data.forEach(e=>{
+            let img = e.img;
+            let modelo = e.modelo;
+            let marca = e.marca;
+            //console.log(img,modelo,marca,precio,año)
+            codeHtml += `<div class="producto__celulares" >
+            <div class="producto__informacion" >
+                <div class="producto__img" >
+                    <img src="${img}" alt="">
+                </div>
+                <div class="producto__info" >
+                    <h3>${marca} ${modelo}</h3>
+                    <a  class="producto__boton" id='${modelo}' >Más información</a>
+                </div>
+            </div>
+        </div>`;
+        })
+        contenedor.innerHTML = codeHtml
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+buscarProductos()
+
+
+
+
+
+
+
 
 let ubicacionprincipal = window.pageYOffset; //0
 window.addEventListener("scroll" ,function(){
@@ -140,32 +136,99 @@ document.querySelectorAll(".hamburguer")[0].addEventListener("click", function()
 
 let contenedor = document.querySelector('.grid-container')
 let codeHtml = ''
+/*let pintarInformacion=`
+<div class="grid__img" data-aos="zoom-out-right" data-aos-duration="2000">
+<img src="${e.img}" alt="">
 
-
-//document.getElementById('todos').style.display='none'
-
-productos.forEach(e => {
-
-    let img = e.img;
-    let modelo = e.modelo;
-    let marca = e.marca;
-    let precio = e.precio;
-    let año = e.año;
-    //console.log(img,modelo,marca,precio,año)
-    codeHtml += `<div class="producto__celulares" >
-    <div class="producto__informacion" >
-        <div class="producto__img" >
-            <img src="${img}" alt="">
-        </div>
-        <div class="producto__info" >
-            <h3>${marca} ${modelo}</h3>
-            <a href="#" class="producto__boton">Más información</a>
-        </div>
+</div>
+<div class="grid__item">
+<div class="grid__item__info" data-aos="zoom-out-down" data-aos-duration="2500">
+    <h2>${e.marca} ${e.modelo}</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, ab. Amet rerum corrupti soluta temporibus necessitatibus, fugit consectetur. Cumque aliquid sint nemo adipisci, quos autem laudantium, tenetur ipsum ex doloribus porro, fuga ullam molestias corrupti ea! Temporibus quibusdam officia nobis.!</p>
+</div>
+<div class="grid__item__caracteristicas" data-aos="fade-up"
+data-aos-anchor-placement="bottom-bottom" data-aos-duration="2700">
+    <h2>Caracteristicas</h2>
+    <div class="flex__caracteristicas" data-aos="fade-up"
+    data-aos-anchor-placement="bottom-bottom" data-aos-duration="3000">
+        <b><p><i class="fas fa-mobile-alt"></i> Pantalla: 5.5",100</p></b>
+        <b><p><i class="fas fa-microchip"></i> Procesador:Apple A11 Bionic</p></b>
+        <b><p><i class="fas fa-database"></i> Ram: 3GB</p></b>
+        <b><p><i class="fas fa-memory"></i> Almacenamiento: 64GB/256GB</p></b>
+        <b><p><i class="fas fa-sd-card"></i> Expansion: sin microSD</p></b>
+        <b><p><i class="fas fa-camera"></i> Camara: 12MP,Dual</p></b>
+        <b><p><i class="fas fa-battery-full"></i> Batería: 12MP,2700 mAh</p></b>
+        <b><p><i class="fas fa-code"></i> Os:iOS 11</p></b>
+        <b><p><i class="fas fa-expand-arrows-alt"></i> Perfil: 7.5mm</p></b>
+        <b><p><i class="fas fa-balance-scale"></i> Peso: 202g</p></b>
     </div>
-</div>`;
+</div>
+</div>
+
+`*/
+
+
+
+
+contenedor.addEventListener('click',(e)=>{
+    let idInformacion=e.target.id;
+    let vistaProductos=document.getElementById('vistaProductos')  
+    document.querySelector('.nav').style.display='none',contenedor.style.opacity='.2',botonFiltrar.style.display='none'
+
+    document.body.style.overflow='hidden'
+    vistaProductos.classList.add('mostrar__vista__productos')
+    vistaProductos.style.overflow='scroll';
+    //console.log(idInformacion)
+    data.forEach(e=>{
+        if(e.modelo==idInformacion){
+           console.log(e.marca,e.modelo,e.precio)
+           if(e.objeto=='celular'){
+               console.log('presentar celular')
+           }
+           vistaProductos.innerHTML=`
+           <div class="grid__img" data-aos="zoom-out-right" data-aos-duration="2000">
+           <img src="${e.img}" alt="">
+           
+           </div>
+           <div class="grid__item">
+           <div class="grid__item__info" data-aos="zoom-out-down" data-aos-duration="2500">
+                <div class='hamburguer__exit' id="boton__exit"><i class="fas fa-times"></i></div>
+               <h2>${e.marca} ${e.modelo}</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, ab. Amet rerum corrupti soluta temporibus necessitatibus, fugit consectetur. Cumque aliquid sint nemo adipisci, quos autem laudantium, tenetur ipsum ex doloribus porro, fuga ullam molestias corrupti ea! Temporibus quibusdam officia nobis.!</p>
+           </div>
+           <div class="grid__item__caracteristicas" data-aos="fade-up"
+           data-aos-anchor-placement="bottom-bottom" data-aos-duration="2700">
+               <h2>Caracteristicas</h2>
+               <div class="flex__caracteristicas" data-aos="fade-up"
+               data-aos-anchor-placement="bottom-bottom" data-aos-duration="3000">
+                   <b><p><i class="fas fa-mobile-alt"></i> Pantalla: 5.5",100</p></b>
+                   <b><p><i class="fas fa-microchip"></i> Procesador:Apple A11 Bionic</p></b>
+                   <b><p><i class="fas fa-database"></i> Ram: 3GB</p></b>
+                   <b><p><i class="fas fa-memory"></i> Almacenamiento: 64GB/256GB</p></b>
+                   <b><p><i class="fas fa-sd-card"></i> Expansion: sin microSD</p></b>
+                   <b><p><i class="fas fa-camera"></i> Camara: 12MP,Dual</p></b>
+                   <b><p><i class="fas fa-battery-full"></i> Batería: 12MP,2700 mAh</p></b>
+                   <b><p><i class="fas fa-code"></i> Os:iOS 11</p></b>
+                   <b><p><i class="fas fa-expand-arrows-alt"></i> Perfil: 7.5mm</p></b>
+                   <b><p><i class="fas fa-balance-scale"></i> Peso: 202g</p></b>
+               </div>
+           </div>
+           </div>
+           
+           `
+        }
+    })
+    const botonExit=document.getElementById('boton__exit')
+botonExit.addEventListener('click',()=>{
+    vistaProductos.classList.remove('mostrar__vista__productos')
+    document.querySelector('.nav').style.display='flex',contenedor.style.opacity='1',botonFiltrar.style.display='initial'
+
+    document.body.style.overflow='scroll'
+})
 })
 
-contenedor.innerHTML = codeHtml
+
+
 
 
 
@@ -176,14 +239,7 @@ texto.addEventListener('click', (e) => {
     texto.style.borderBottom = '2px solid tomato';
 })
 
-/*texto.addEventListener('keypress',(e)=>{
-    if(e.keyCode==13){
-        codeHtml=''
-        filtrar()
-    }
 
-
-})*/
 
 
 
@@ -219,67 +275,6 @@ botonFiltrar.addEventListener('click', () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-const filtrar = () => {
-    let textoIngresado = texto.value.toLowerCase()
-
-    productos.forEach(e => {
-        let marca = e.marca.toLocaleLowerCase();
-        let modelo = e.modelo.toLocaleLowerCase()
-
-        if (marca.indexOf(textoIngresado) !== -1) {
-
-            pintar(e)
-
-        } else if (modelo.indexOf(textoIngresado) !== -1) {
-
-            pintar(e)
-
-        }
-
-    })
-
-    if (codeHtml == '') {
-        console.log('no hay elemtno')
-        noEncuentraProducto()
-    }
-    contenedor.innerHTML = codeHtml
-
-}
-const pintar = (e) => {
-
-    console.log('entraste a la funcion papu')
-    codeHtml += `<div class="producto__celulares" data-aos="fade-right">
-        <div class="producto__informacion">
-        <div class="producto__img">
-            <img src="${e.img}" alt="">
-        </div>
-         <div class="producto__info">
-            <h3>${e.marca} ${e.modelo}</h3>
-            <h3></h3>
-            <a href="#" class="producto__boton">Más información</a>
-        </div>
-    </div>
-</div>`;
-
-}
-const noEncuentraProducto = () => {
-    codeHtml = `<div class="elementos" >
-                <h2>Poducto no encontrado</h2>
-                  <img src="https://i.pinimg.com/564x/26/b8/84/26b8840bf90d9f66ebe9f48c458ff9d1.jpg" class="img-error">
-                <h2>La pagina está sufriendo ansiedad, no existe tu busqueda</h2>
-              </div>`;
-
-}
 const filtrarCelulares = document.getElementById('celular')
 const filtrarTodos = document.getElementById('todos')
 const filtrarComputadores = document.getElementById('laptop')
@@ -304,7 +299,7 @@ cajaDeFiltrar.addEventListener('click', (e) => {
     } else if (e.target.id == 'todos') {
         codeHtml = ''
         texto.style.display = 'initial'
-        productos.forEach(e => {
+        data.forEach(e => {
             contenedor.style.marginTop = '6em'
             pintar(e)
             document.getElementById('todos').setAttribute('disabled', '')
@@ -313,20 +308,4 @@ cajaDeFiltrar.addEventListener('click', (e) => {
     contenedor.innerHTML = codeHtml
 })
 
-function filtrarPorDatos(a) {
-    texto.value = ''
 
-    contenedor.style.marginTop = '2.5em'
-    document.getElementById('todos').style.display = 'initial'
-    texto.style.display = 'none'
-    productos.forEach(e => {
-        if (e.objeto == a) {
-
-            pintar(e)
-
-
-        }
-        contenedor.innerHTML = codeHtml
-    })
-
-}

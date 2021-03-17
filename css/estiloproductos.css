@@ -161,6 +161,7 @@
         border-radius: 1em;
         background-color: #ec1c25;
         color: white;
+        cursor: pointer;
     }
     
     .producto__boton:hover {
@@ -263,7 +264,96 @@
         font-size: 2em;
         color: #ec1c25;
     }
+
+
+    /*cajita*/
     
+    .hamburguer__exit i{
+        color: white;
+        cursor: pointer;
+        font-size: 2em;
+        position: absolute;
+        top: .5em;
+        right: 1.5em;
+    }
+
+
+    .vista__productos{
+
+ 
+        display: grid;
+        gap: 2em;
+        grid-template-columns: repeat(2,1fr);
+        position: absolute;
+        top:13%;
+        left: 13%;
+        position: fixed;
+        /*clip-path: inset(0 0 0 100%);*/
+        clip-path: inset(0 55% 0 46%);
+        height: 79vh;
+
+        border-radius: 2em;
+        width: 70%;
+        margin: 0 auto;
+        padding: 1em;
+        transition: all .5s linear;
+    }
+    .mostrar__vista__productos{
+        clip-path: inset(0 0 0 0);
+        transition: all .5s linear ;
+        background-color: #ff0505;
+        
+    }
+    .grid__color{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    
+    .grid__img{
+        width: 90%;
+        margin: auto ;
+       
+    }
+    .grid__img img{
+        width: 100%;
+        
+        object-fit: contain;
+        max-height: 600px;
+        border-radius: 3em;
+        
+    }
+    
+    
+    .grid__item__caracteristicas h2,
+    .grid__item__info h2{
+        text-align: center;
+        color: rgb(231, 231, 231);
+    }
+    .grid__item__info p{
+        margin-top: 1em;
+        text-align: justify;
+        font-weight:400;
+        color: white;
+    }
+    .grid__item__caracteristicas{
+        margin-top: 2em;
+    }
+    .flex__caracteristicas{
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .flex__caracteristicas b {
+        width: 100%;
+        color: white;
+    }
+    .flex__caracteristicas  i {
+
+    }
+
+
     @media screen and (max-width:1046px){
         .enlaces-header {
             position: fixed;
@@ -379,6 +469,13 @@
             color: black;
             font-size: 1em;
             font-weight: 600;
+        }
+        .vista__productos{
+            margin-top:0em;
+            grid-template-columns: 1fr;
+        }
+        .flex__caracteristicas{
+            grid-template-columns: 1fr;
         }
     }
     
