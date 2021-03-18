@@ -120,7 +120,7 @@ const remove=()=>{
     botonExit.addEventListener('click',()=>{
         vistaProductos.classList.remove('mostrar__vista__productos')
         document.querySelector('.nav').style.display='flex',contenedor.style.opacity='1',botonFiltrar.style.display='initial'
-    
+        document.querySelector('.buscador__lista').style.display='flex'
         document.body.style.overflow='scroll'
     })
 }
@@ -303,7 +303,7 @@ contenedor.addEventListener('click',(e)=>{
         if(e.modelo==idInformacion){
             let vistaProductos=document.getElementById('vistaProductos')  
             document.querySelector('.nav').style.display='none',contenedor.style.opacity='.2',botonFiltrar.style.display='none'
-        
+            document.querySelector('.buscador__lista').style.display='none'
             document.body.style.overflow='hidden'
             vistaProductos.classList.add('mostrar__vista__productos')
              
