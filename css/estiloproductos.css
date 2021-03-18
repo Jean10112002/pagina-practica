@@ -218,7 +218,7 @@
         flex-direction: column;
         width: 20%;
      
-        background-color:#3b3a3a94;
+        background-color:#3b3a3ad0;
         /* left: -1000%; */
         clip-path: circle(0.2% at 0 0);
         height: 80vh;
@@ -241,7 +241,7 @@
     
     .buscador__lista a i {
         font-size: 1em;
-        color: #ec1c25;
+        color: #ffffff;
     }
     
     .buscador__lista a:hover {
@@ -280,12 +280,11 @@
 
     .vista__productos{
 
- 
         display: grid;
         gap: 2em;
         grid-template-columns: repeat(2,1fr);
         position: absolute;
-        top:13%;
+        top:15vh;
         left: 13%;
         position: fixed;
         /*clip-path: inset(0 0 0 100%);*/
@@ -349,9 +348,7 @@
         width: 100%;
         color: white;
     }
-    .flex__caracteristicas  i {
-
-    }
+    
 
 
     @media screen and (max-width:1046px){
@@ -471,6 +468,7 @@
             font-weight: 600;
         }
         .vista__productos{
+            overflow: scroll;
             margin-top:0em;
             grid-template-columns: 1fr;
         }
@@ -484,7 +482,6 @@
            
         }
         .grid-container {
-           
             grid-template-columns: repeat(auto-fill,minmax(120px,1fr));
         } 
     }

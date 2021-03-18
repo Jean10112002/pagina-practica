@@ -1,3 +1,129 @@
+
+const vistaCelular=(e)=>{
+    return `<div class="grid__img" data-aos="zoom-out-right" data-aos-duration="2000">
+ <img src="${e.img}" alt="">
+ 
+ </div>
+ <div class="grid__item">
+ <div class="grid__item__info" data-aos="zoom-out-down" data-aos-duration="2500">
+      <div class='hamburguer__exit' id="boton__exit"><i class="fas fa-times"></i></div>
+     <h2>${e.marca} ${e.modelo}</h2>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, ab. Amet rerum corrupti soluta temporibus necessitatibus, fugit consectetur. Cumque aliquid sint nemo adipisci, quos autem laudantium, tenetur ipsum ex doloribus porro, fuga ullam molestias corrupti ea! Temporibus quibusdam officia nobis.!</p>
+ </div>
+ <div class="grid__item__caracteristicas" data-aos="fade-up"
+ data-aos-anchor-placement="bottom-bottom" data-aos-duration="2700">
+     <h2>Caracteristicas principales</h2>
+     <div class="flex__caracteristicas" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" data-aos-duration="3000">
+         <b><p><i class="fas fa-mobile-alt"></i> Pantalla: 5.5",100</p></b>
+         <b><p><i class="fas fa-microchip"></i> Procesador:Apple A11 Bionic</p></b>
+         <b><p><i class="fas fa-database"></i> Ram: 3GB</p></b>
+         <b><p><i class="fas fa-memory"></i> Almacenamiento: 64GB/256GB</p></b>
+         <b><p><i class="fas fa-sd-card"></i> Expansion: sin microSD</p></b>
+         <b><p><i class="fas fa-camera"></i> Camara: 12MP,Dual</p></b>
+         <b><p><i class="fas fa-battery-full"></i> Batería: 12MP,2700 mAh</p></b>
+         <b><p><i class="fas fa-code"></i> Os:iOS 11</p></b>
+         <b><p><i class="fas fa-expand-arrows-alt"></i> Perfil: 7.5mm</p></b>
+         <b><p><i class="fas fa-balance-scale"></i> Peso: 202g</p></b>
+     </div>
+ </div>
+ </div>
+ 
+ `
+ }
+ const vistaLaptop=(e)=>{
+     return `
+     <div class="grid__img" data-aos="zoom-out-right" data-aos-duration="2000">
+     <img src="${e.img}" alt="">
+     
+     </div>
+     <div class="grid__item">
+     <div class="grid__item__info" data-aos="zoom-out-down" data-aos-duration="2500">
+          <div class='hamburguer__exit' id="boton__exit"><i class="fas fa-times"></i></div>
+         <h2>${e.marca} ${e.modelo}</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, ab. Amet rerum corrupti soluta temporibus necessitatibus, fugit consectetur. Cumque aliquid sint nemo adipisci, quos autem laudantium, tenetur ipsum ex doloribus porro, fuga ullam molestias corrupti ea! Temporibus quibusdam officia nobis.!</p>
+     </div>
+     <div class="grid__item__caracteristicas" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" data-aos-duration="2700">
+         <h2>Caracteristicas principales</h2>
+         <div class="flex__caracteristicas" data-aos="fade-up"
+         data-aos-anchor-placement="bottom-bottom" data-aos-duration="3000">
+             <b><p><i class="fas fa-mobile-alt"></i> Pantalla: 5.5",100</p></b>
+             <b><p><i class="fas fa-microchip"></i> Procesador:Apple A11 Bionic</p></b>
+             <b><p><i class="fas fa-database"></i> Ram: 3GB</p></b>
+             <b><p><i class="fas fa-memory"></i> Almacenamiento: 64GB/256GB</p></b>
+             <b><p><i class="fas fa-balance-scale"></i> Peso: 202g</p></b>
+         </div>
+     </div>
+     </div>
+     
+     `
+ }
+ const vistaImpresora=(e)=>{
+     return `
+     <div class="grid__img" data-aos="zoom-out-right" data-aos-duration="2000">
+     <img src="${e.img}" alt="">
+     
+     </div>
+     <div class="grid__item">
+     <div class="grid__item__info" data-aos="zoom-out-down" data-aos-duration="2500">
+          <div class='hamburguer__exit' id="boton__exit"><i class="fas fa-times"></i></div>
+         <h2>${e.marca} ${e.modelo}</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, ab. Amet rerum corrupti soluta temporibus necessitatibus, fugit consectetur. Cumque aliquid sint nemo adipisci, quos autem laudantium, tenetur ipsum ex doloribus porro, fuga ullam molestias corrupti ea! Temporibus quibusdam officia nobis.!</p>
+     </div>
+     <div class="grid__item__caracteristicas" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" data-aos-duration="2700">
+         <h2>Caracteristicas principales</h2>
+         <div class="flex__caracteristicas" data-aos="fade-up"
+         data-aos-anchor-placement="bottom-bottom" data-aos-duration="3000">
+             <b><p><i class="fas fa-mobile-alt"></i> Imprimir desde Pendrive
+             </p></b>
+             <b><p><i class="fas fa-microchip"></i> Escanear a Email</p></b>
+             <b><p><i class="fas fa-database"></i> Imprimir desde Celular</p></b>
+             <b><p><i class="fas fa-memory"></i> Cuentas de Usuario</p></b>
+             <b><p><i class="fas fa-balance-scale"></i> Compaginador y Sorteador de hojas</p></b>
+             <b><p><i class="fas fa-database"></i> Reportes de consumo y desgaste</p></b>
+             <b><p><i class="fas fa-database"></i> Funciones de Seguridad</p></b>
+         </div>
+     </div>
+     </div>
+     
+     `
+ }
+ const vistaOtro=(e)=>{
+     return `
+     <div class="grid__img" data-aos="zoom-out-right" data-aos-duration="2000">
+     <img src="${e.img}" alt="">
+     
+     </div>
+     <div class="grid__item">
+     <div class="grid__item__info" data-aos="zoom-out-down" data-aos-duration="2500">
+          <div class='hamburguer__exit' id="boton__exit"><i class="fas fa-times"></i></div>
+         <h2>${e.marca} ${e.modelo}</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, ab. Amet rerum corrupti soluta temporibus necessitatibus, fugit consectetur. Cumque aliquid sint nemo adipisci, quos autem laudantium, tenetur ipsum ex doloribus porro, fuga ullam molestias corrupti ea! Temporibus quibusdam officia nobis.!</p>
+     </div>
+     <div class="grid__item__caracteristicas" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" data-aos-duration="2700">
+         <h2>Caracteristicas principales</h2>
+         <div class="flex__caracteristicas" data-aos="fade-up"
+         data-aos-anchor-placement="bottom-bottom" data-aos-duration="3000">
+         <b><p><i class="fas fa-expand-arrows-alt"></i> Longitud: 7.5mm</p></b>
+         </div>
+     </div>
+     </div>
+     
+     `
+ }
+ 
+const remove=()=>{
+    const botonExit=document.getElementById('boton__exit')
+    botonExit.addEventListener('click',()=>{
+        vistaProductos.classList.remove('mostrar__vista__productos')
+        document.querySelector('.nav').style.display='flex',contenedor.style.opacity='1',botonFiltrar.style.display='initial'
+    
+        document.body.style.overflow='scroll'
+    })
+}
 const filtrarPorDatos=(a)=>{
     texto.value = ''
 
@@ -169,62 +295,42 @@ data-aos-anchor-placement="bottom-bottom" data-aos-duration="2700">
 
 
 
-
 contenedor.addEventListener('click',(e)=>{
     let idInformacion=e.target.id;
-    let vistaProductos=document.getElementById('vistaProductos')  
-    document.querySelector('.nav').style.display='none',contenedor.style.opacity='.2',botonFiltrar.style.display='none'
 
-    document.body.style.overflow='hidden'
-    vistaProductos.classList.add('mostrar__vista__productos')
-    vistaProductos.style.overflow='scroll';
     //console.log(idInformacion)
     data.forEach(e=>{
         if(e.modelo==idInformacion){
+            let vistaProductos=document.getElementById('vistaProductos')  
+            document.querySelector('.nav').style.display='none',contenedor.style.opacity='.2',botonFiltrar.style.display='none'
+        
+            document.body.style.overflow='hidden'
+            vistaProductos.classList.add('mostrar__vista__productos')
+             
            console.log(e.marca,e.modelo,e.precio)
            if(e.objeto=='celular'){
                console.log('presentar celular')
+               vistaProductos.innerHTML=vistaCelular(e)
+               remove()
            }
-           vistaProductos.innerHTML=`
-           <div class="grid__img" data-aos="zoom-out-right" data-aos-duration="2000">
-           <img src="${e.img}" alt="">
-           
-           </div>
-           <div class="grid__item">
-           <div class="grid__item__info" data-aos="zoom-out-down" data-aos-duration="2500">
-                <div class='hamburguer__exit' id="boton__exit"><i class="fas fa-times"></i></div>
-               <h2>${e.marca} ${e.modelo}</h2>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, ab. Amet rerum corrupti soluta temporibus necessitatibus, fugit consectetur. Cumque aliquid sint nemo adipisci, quos autem laudantium, tenetur ipsum ex doloribus porro, fuga ullam molestias corrupti ea! Temporibus quibusdam officia nobis.!</p>
-           </div>
-           <div class="grid__item__caracteristicas" data-aos="fade-up"
-           data-aos-anchor-placement="bottom-bottom" data-aos-duration="2700">
-               <h2>Caracteristicas</h2>
-               <div class="flex__caracteristicas" data-aos="fade-up"
-               data-aos-anchor-placement="bottom-bottom" data-aos-duration="3000">
-                   <b><p><i class="fas fa-mobile-alt"></i> Pantalla: 5.5",100</p></b>
-                   <b><p><i class="fas fa-microchip"></i> Procesador:Apple A11 Bionic</p></b>
-                   <b><p><i class="fas fa-database"></i> Ram: 3GB</p></b>
-                   <b><p><i class="fas fa-memory"></i> Almacenamiento: 64GB/256GB</p></b>
-                   <b><p><i class="fas fa-sd-card"></i> Expansion: sin microSD</p></b>
-                   <b><p><i class="fas fa-camera"></i> Camara: 12MP,Dual</p></b>
-                   <b><p><i class="fas fa-battery-full"></i> Batería: 12MP,2700 mAh</p></b>
-                   <b><p><i class="fas fa-code"></i> Os:iOS 11</p></b>
-                   <b><p><i class="fas fa-expand-arrows-alt"></i> Perfil: 7.5mm</p></b>
-                   <b><p><i class="fas fa-balance-scale"></i> Peso: 202g</p></b>
-               </div>
-           </div>
-           </div>
-           
-           `
+            if(e.objeto=='laptop'){
+               console.log('presentar informacion de laptops')
+               vistaProductos.innerHTML=vistaLaptop(e)
+               remove()
+           }
+           if(e.objeto=='impresora'){
+               console.log('presentar información de impresoras')
+               vistaProductos.innerHTML=vistaImpresora(e)
+               remove()
+           }
+           if(e.objeto=='otro'){
+               console.log('presentar informacion de otros')
+               vistaProductos.innerHTML=vistaOtro(e)
+               remove()
+           }
+          
         }
     })
-    const botonExit=document.getElementById('boton__exit')
-botonExit.addEventListener('click',()=>{
-    vistaProductos.classList.remove('mostrar__vista__productos')
-    document.querySelector('.nav').style.display='flex',contenedor.style.opacity='1',botonFiltrar.style.display='initial'
-
-    document.body.style.overflow='scroll'
-})
 })
 
 
@@ -233,7 +339,7 @@ botonExit.addEventListener('click',()=>{
 
 
 let texto = document.getElementById('texto')
-texto.style.display = 'none'
+texto.style.display = 'initial'
 texto.addEventListener('click', (e) => {
     texto.style.border = 'none';
     texto.style.borderBottom = '2px solid tomato';
